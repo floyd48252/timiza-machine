@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="TIMIZA AGRO MACHINERY - Agro machinery dealer in Nakuru and Naivasha. Order via WhatsApp or send an inquiry." />
+    <title>TIMIZA AGRO MACHINERY</title>
+    <style>
+         :root {
+            --green: #0f5132;
+            --green-2: #198754;
+            --bg: #f4f7f5;
+            --text: #1f2937;
+            --muted: #6b7280;
+            --card: #ffffff;
+            --border: #e5e7eb;
+            --shadow: 0 10px 25px rgba(0, 0, 0, .08);
+            --radius: 18px;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+        
+        html {
+            scroll-behavior: smooth
+        }
+        
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        a {
+            text-decoration: none
+        }
+        
+        img {
+            max-width: 100%;
+            display: block
+        }
+        
+        .container {
+            width: min(1180px, 92%);
+            margin: auto
+        }
+        
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(15, 81, 50, .96);
+            color: #fff;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 14px rgba(0, 0, 0, .12);
+        }
+        
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 16px 0;
+            flex-wrap: wrap;
+        }
+        
+        .brand h1 {
+            font-size: 1.15rem;
+            letter-spacing: .4px;
+            margin-bottom: 2px;
+        }
+        
+        .brand p {
+            font-size: .95rem;
+            opacity: .9
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            color: #fff;
+            font-weight: 700;
+            padding: 8px 10px;
+            border-radius: 10px;
+            transition: .2s ease;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255, 255, 255, .12)
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(15, 81, 50, .82), rgba(15, 81, 50, .82)), url('hero.jpg') center/cover no-repeat;
+            color: #fff;
+            padding: 92px 0 84px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            overflow: hidden;
+            z-index: 0;
+            opacity: 0.45;
+        }
+        
+        .hero-images-carousel {
+            display: flex;
+            gap: 30px;
+            animation: slide 30s linear infinite;
+            min-width: 200%;
+        }
+        
+        .hero-images-carousel img {
+            height: 200px;
+            width: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            flex-shrink: 0;
+        }
+        
+        @keyframes slide {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h2 {
+            font-size: clamp(2rem, 4vw, 3.4rem);
+            line-height: 1.12;
+            margin-bottom: 14px;
+        }
+        
+        .hero p {
+            max-width: 760px;
+            margin: 0 auto 22px;
+            font-size: 1.05rem;
+            opacity: .96;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--green-2);
+            color: #fff;
+            padding: 13px 20px;
+            border-radius: 999px;
+            font-weight: 700;
+            transition: .2s ease;
+            box-shadow: 0 10px 18px rgba(25, 135, 84, .22);
+        }
+        
+        .btn:hover {
+            transform: translateY(-1px);
+            filter: brightness(1.02)
+        }
+        
+        .btn-group {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .section {
+            padding: 58px 0
+        }
+        
+        .section-title {
+            font-size: clamp(1.5rem, 2.8vw, 2.2rem);
+            margin-bottom: 10px;
+            color: var(--green);
+        }
+        
+        .section-subtitle {
+            color: var(--muted);
+            margin-bottom: 22px;
+            max-width: 800px;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 18px;
+        }
+        
+        .info-card,
+        .contact-card,
+        .form-card,
+        .product-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .info-card {
+            padding: 22px;
+        }
+        
+        .info-card h3,
+        .contact-card h3,
+        .form-card h3,
+        .product-card h3 {
+            color: var(--green);
+            margin-bottom: 10px;
+            font-size: 1.12rem;
+        }
+        
+        .muted {
+            color: var(--muted)
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 22px;
+        }
+        
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 22px;
+        }
+        
+        .review-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 22px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .review-card .stars {
+            color: #f59e0b;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+        
+        .review-card .review-text {
+            color: var(--text);
+            line-height: 1.6;
+            font-style: italic;
+            flex: 1;
+        }
+        
+        .review-card .reviewer-name {
+            font-weight: 700;
+            color: var(--green);
+            font-size: 0.95rem;
+        }
+        
+        .review-card .reviewer-location {
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+        
+        .certificate-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            align-items: center;
+            margin-top: 32px;
+        }
+        
+        .certificate-image {
+            max-width: 100%;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+        
+        @media (max-width: 800px) {
+            .certificate-section {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+        }
+        
+        .product-card {
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-image {
+            height: 210px;
+            background: #e9ecef;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #6b7280;
+            font-weight: 700;
+            letter-spacing: .3px;
+        }
+        
+        .product-content {
+            padding: 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex: 1;
+        }
+        
+        .price {
+            background: #ecfdf5;
+            border: 1px solid #bbf7d0;
+            color: #065f46;
+            padding: 8px 10px;
+            border-radius: 10px;
+            font-weight: 700;
+        }
+        
+        .plan {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            padding: 10px;
+            border-radius: 10px;
+            color: #374151;
+        }
+        
+        .card-actions {
+            margin-top: auto;
+            padding-top: 10px;
+        }
+        
+        .btn.whatsapp {
+            width: 100%;
+            text-align: center;
+            background: #25d366;
+            box-shadow: 0 10px 18px rgba(37, 211, 102, .18);
+        }
+        
+        .contact-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1.1fr;
+            gap: 22px;
+            align-items: start;
+        }
+        
+        .contact-card,
+        .form-card {
+            padding: 22px;
+        }
+        
+        .contact-list {
+            display: grid;
+            gap: 12px;
+            margin-top: 14px;
+        }
+        
+        .contact-item {
+            padding: 14px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: #fafafa;
+        }
+        
+        .contact-item strong {
+            display: block;
+            margin-bottom: 4px;
+            color: #111827
+        }
+        
+        form {
+            display: grid;
+            gap: 12px;
+            margin-top: 10px;
+        }
+        
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #d1d5db;
+            border-radius: 12px;
+            font-size: 1rem;
+            outline: none;
+            background: #fff;
+        }
+        
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: var(--green-2);
+            box-shadow: 0 0 0 4px rgba(25, 135, 84, .12);
+        }
+        
+        textarea {
+            min-height: 140px;
+            resize: vertical
+        }
+        
+        .footer {
+            background: var(--green);
+            color: #fff;
+            text-align: center;
+            padding: 38px 0;
+            margin-top: 48px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section h4 {
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        
+        .footer-section p,
+        .footer-section a {
+            font-size: 0.9rem;
+            margin: 8px 0;
+            opacity: 0.95;
+        }
+        
+        .footer-section a {
+            color: #fff;
+            text-decoration: none;
+            transition: opacity .2s ease;
+        }
+        
+        .footer-section a:hover {
+            opacity: 0.8;
+        }
+        
+        .footer-divider {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 16px;
+            margin-top: 16px;
+            font-size: 0.85rem;
+            opacity: 0.9;
+        }
+        
+        .page {
+            display: none;
+            animation: fade .25s ease;
+        }
+        
+        .page.active {
+            display: block
+        }
+        
+        @keyframes fade {
+            from {
+                opacity: .5;
+                transform: translateY(4px)
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0)
+            }
+        }
+        
+        @media (max-width:900px) {
+            .contact-wrap {
+                grid-template-columns: 1fr
+            }
+        }
+        
+        @media (max-width:768px) {
+            .hero {
+                padding: 60px 0 60px;
+            }
+            
+            .hero-images-carousel img {
+                height: 140px;
+                width: 140px;
+            }
+            
+            .hero h2 {
+                font-size: clamp(1.5rem, 3vw, 2.5rem);
+            }
+            
+            .hero p {
+                font-size: 0.95rem;
+            }
+            
+            .btn-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .btn {
+                width: 100%;
+                padding: 12px 16px;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                gap: 16px;
+            }
+            
+            .reviews-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            
+            .info-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+            
+            .certificate-section {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            input, textarea, select {
+                padding: 11px 12px;
+                font-size: 16px;
+            }
+            
+            .contact-list {
+                gap: 10px;
+            }
+            
+            .contact-item {
+                padding: 12px;
+            }
+        }
+        
+        @media (max-width:620px) {
+            .hero {
+                padding: 50px 0 50px;
+            }
+            
+            .hero-background {
+                opacity: 0.3;
+            }
+            
+            .hero-images-carousel img {
+                height: 100px;
+                width: 100px;
+                gap: 15px;
+            }
+            
+            .hero h2 {
+                font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+                margin-bottom: 10px;
+            }
+            
+            .hero p {
+                font-size: 0.9rem;
+                margin: 0 auto 16px;
+            }
+            
+            .btn-group {
+                gap: 8px;
+            }
+            
+            .btn {
+                padding: 10px 14px;
+                font-size: 0.9rem;
+            }
+            
+            .container {
+                width: 95%;
+            }
+            
+            .section {
+                padding: 40px 0;
+            }
+            
+            .section-title {
+                font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+                margin-bottom: 8px;
+            }
+            
+            .section-subtitle {
+                font-size: 0.9rem;
+                margin-bottom: 16px;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            .product-image {
+                height: 180px;
+            }
+            
+            .reviews-grid {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+            
+            .review-card {
+                padding: 16px;
+                gap: 10px;
+            }
+            
+            .review-card .stars {
+                font-size: 1rem;
+            }
+            
+            .review-card .review-text {
+                font-size: 0.9rem;
+            }
+            
+            .info-card {
+                padding: 16px;
+            }
+            
+            .info-card h3,
+            .contact-card h3,
+            .form-card h3 {
+                font-size: 1rem;
+            }
+            
+            .nav {
+                justify-content: center;
+                text-align: center;
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .brand h1 {
+                font-size: 1rem;
+            }
+            
+            .brand p {
+                font-size: 0.85rem;
+            }
+            
+            .nav-links {
+                justify-content: center;
+                gap: 8px;
+            }
+            
+            .nav-links a {
+                padding: 6px 8px;
+                font-size: 0.9rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                text-align: center;
+            }
+            
+            .footer-section h4 {
+                font-size: 0.9rem;
+                margin-bottom: 8px;
+            }
+            
+            .footer-section p,
+            .footer-section a {
+                font-size: 0.85rem;
+                margin: 6px 0;
+            }
+            
+            .footer-divider {
+                font-size: 0.8rem;
+                padding-top: 12px;
+                margin-top: 12px;
+            }
+            
+            .contact-wrap {
+                gap: 16px;
+            }
+            
+            .contact-card,
+            .form-card {
+                padding: 16px;
+            }
+            
+            input, textarea, select {
+                padding: 10px 12px;
+                font-size: 16px;
+                border-radius: 8px;
+            }
+            
+            button.btn {
+                width: 100%;
+            }
+            
+            .certificate-image {
+                max-width: 100%;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                padding: 40px 0 40px;
+            }
+            
+            .hero-images-carousel img {
+                height: 80px;
+                width: 80px;
+            }
+            
+            .topbar {
+                padding: 12px 0;
+            }
+            
+            .container {
+                width: 96%;
+            }
+            
+            .section {
+                padding: 30px 0;
+            }
+            
+            .btn {
+                padding: 9px 12px;
+                font-size: 0.85rem;
+            }
+            
+            .product-card {
+                min-height: auto;
+            }
+            
+            .product-image {
+                height: 150px;
+            }
+            
+            .product-content {
+                padding: 14px;
+            }
+            
+            .price {
+                font-size: 0.9rem;
+                padding: 6px 8px;
+            }
+            
+            .plan {
+                font-size: 0.85rem;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="topbar">
+        <div class="container nav">
+            <div class="brand">
+                <h1>TIMIZA AGRO MACHINERY</h1>
+                <p>Nakuru • Naivasha</p>
+            </div>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#products">Products</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="page active">
+            <div class="hero">
+                <div class="hero-background">
+                    <div class="hero-images-carousel">
+                        <img src="high speed chaff cutter.jpeg" alt="High Speed Chaff Cutter">
+                        <img src="walking tractor.jpeg" alt="Walking Tractor">
+                        <img src="sugarcane juice machine.jpeg" alt="Sugarcane Juice Machine">
+                        <img src="feed pellet machine.jpeg" alt="Feed Pellet Machine">
+                        <img src="generator.jpeg" alt="Generator">
+                        <img src="combine high speed chaff cutter.jpeg" alt="Combine High Speed Chaff Cutter">
+                        <img src="incubator.jpeg" alt="Incubator">
+                        <img src="grass cutter machine.jpeg" alt="Grass Cutter Machine">
+                        <img src="shelder machine.jpeg" alt="Shelder Machine">
+                        <img src="high speed chaff cutter.jpeg" alt="High Speed Chaff Cutter">
+                        <img src="walking tractor.jpeg" alt="Walking Tractor">
+                        <img src="sugarcane juice machine.jpeg" alt="Sugarcane Juice Machine">
+                        <img src="feed pellet machine.jpeg" alt="Feed Pellet Machine">
+                        <img src="generator.jpeg" alt="Generator">
+                        <img src="combine high speed chaff cutter.jpeg" alt="Combine High Speed Chaff Cutter">
+                        <img src="incubator.jpeg" alt="Incubator">
+                        <img src="grass cutter machine.jpeg" alt="Grass Cutter Machine">
+                        <img src="shelder machine.jpeg" alt="Shelder Machine">
+                    </div>
+                </div>
+                <div class="hero-content">
+                    <div class="container">
+                        <h2>Quality Agro Machinery For Your Business</h2>
+                        <p>
+                            TIMIZA AGRO MACHINERY serves customers in Nakuru and Naivasha with cash and loan payment options. Order directly through WhatsApp or send an inquiry using the contact form below.
+                        </p>
+                        <div class="btn-group">
+                            <a class="btn" href="https://wa.me/254762694293?text=Hello%20TIMIZA%20AGRO%20MACHINERY%2C%20I%20want%20to%20make%20an%20order" target="_blank" rel="noopener">Order on WhatsApp</a>
+                            <a class="btn" href="#products" style="background: #0f5132;">View Products</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Featured Products</h2>
+                    <p class="section-subtitle">Popular machinery trusted by our customers. Browse our full product range by clicking View Products.</p>
+                    <div class="products-grid">
+                        <article class="product-card">
+                            <div class="product-image"><img src="high speed chaff cutter.jpeg" alt="High Speed Chaff Cutter" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                            <div class="product-content">
+                                <h3>High Speed Chaff Cutter</h3>
+                                <div class="price">Cash: KSh 50,000</div>
+                                <div class="plan">Loan: Deposit KSh 4,500 for 22 months</div>
+                                <div class="card-actions">
+                                    <a class="btn whatsapp" href="https://wa.me/254762694293?text=Hello%20I%20want%20the%20High%20Speed%20Chaff%20Cutter%20cash%20KSh%2050,000%20loan%20deposit%20KSh%204,500%20for%2022%20months" target="_blank" rel="noopener">Order on WhatsApp</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="product-image"><img src="walking tractor.jpeg" alt="Walking Tractor" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                            <div class="product-content">
+                                <h3>Walking Tractor</h3>
+                                <div class="price">Cash: KSh 120,000</div>
+                                <div class="plan">Loan: Deposit KSh 40,000, then KSh 4,500 for 22 months</div>
+                                <div class="card-actions">
+                                    <a class="btn whatsapp" href="https://wa.me/254762694293?text=Hello%20I%20want%20the%20Walking%20Tractor%20cash%20KSh%20120,000%20loan%20deposit%20KSh%2040,000%20monthly%20KSh%204,500%20for%2022%20months" target="_blank" rel="noopener">Order on WhatsApp</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="product-image"><img src="sugarcane juice machine.jpeg" alt="Sugarcane Juice Machine" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                            <div class="product-content">
+                                <h3>Sugarcane Juice Machine</h3>
+                                <div class="price">Cash: KSh 40,000</div>
+                                <div class="plan">Loan: Deposit KSh 7,500, then KSh 2,940 monthly for 14 months</div>
+                                <div class="card-actions">
+                                    <a class="btn whatsapp" href="https://wa.me/254762694293?text=Hello%20I%20want%20the%20Sugarcane%20Juice%20Machine%20cash%20KSh%2040,000%20loan%20deposit%20KSh%207,500%20monthly%20KSh%202,940%20for%2014%20months" target="_blank" rel="noopener">Order on WhatsApp</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Business Details</h2>
+                    <p class="section-subtitle">Key contacts and location information for quick customer support.</p>
+                    <div class="info-grid">
+                        <div class="info-card">
+                            <h3>Location</h3>
+                            <p>Nakuru, Naivasha</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>General Manager</h3>
+                            <p>0782424842</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Assistant Manager</h3>
+                            <p>0762694293</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Email</h3>
+                            <p><a href="mailto:thiongojosphat21@gmail.com">thiongojosphat21@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">What Our Customers Say</h2>
+                    <p class="section-subtitle">Trusted by farmers and agribusiness entrepreneurs across the country.</p>
+                    <div class="reviews-grid">
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">
+                                "The quality of the chaff cutter from Timiza is exceptional! It has transformed my farming operation. The loan option made it affordable for me. Highly recommended!"
+                            </p>
+                            <div class="reviewer-name">Samuel Kipchoge</div>
+                            <div class="reviewer-location">Nakuru</div>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">
+                                "I purchased the Walking Tractor and it's been a game-changer for my farm. The team at Timiza was professional and the payment plan was flexible and manageable."
+                            </p>
+                            <div class="reviewer-name">Jane Mwangi</div>
+                            <div class="reviewer-location">Naivasha</div>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">
+                                "I run a small agro-processing business and the Feed Pellet Machine has increased my productivity tenfold. Timiza's customer service is outstanding!"
+                            </p>
+                            <div class="reviewer-name">Peter Kimani</div>
+                            <div class="reviewer-location">Murang'a</div>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">
+                                "The Generator I got from Timiza is reliable and fuel-efficient. Their WhatsApp support is quick and responsive. Best decision for my farm!"
+                            </p>
+                            <div class="reviewer-name">Grace Omondi</div>
+                            <div class="reviewer-location">Kisumu</div>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">
+                                "Excellent machinery and excellent service! The Sugarcane Juice Machine has made my juice business more efficient. Timiza truly cares about their customers."
+                            </p>
+                            <div class="reviewer-name">David Ochieng</div>
+                            <div class="reviewer-location">Eldoret</div>
+                        </div>
+
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">
+                                "I'm impressed with how Timiza delivered the equipment to my farm even though I'm far from Nakuru. Professional, reliable, and affordable. Top-notch service!"
+                            </p>
+                            <div class="reviewer-name">Susan Kiplagat</div>
+                            <div class="reviewer-location">Kericho</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section id="about" class="page">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">About Us</h2>
+                    <p class="section-subtitle">
+                        TIMIZA AGRO MACHINERY provides farm and agro-processing equipment to support farming and small business growth.
+                    </p>
+                    <div class="info-card">
+                        <p>
+                            We offer selected products under cash and loan plans, with WhatsApp ordering for fast customer service. Our main service areas are Nakuru and Naivasha.
+                        </p>
+                    </div>
+
+                    <div style="margin-top: 32px; display: grid; gap: 20px;">
+                        <div class="info-card">
+                            <h3 style="margin-bottom: 12px; color: var(--green);">Why Choose Timiza Agro Machinery?</h3>
+                            <p>
+                                At Timiza Agro Machinery, we are committed to delivering quality agro-processing equipment that empowers farmers and agribusiness entrepreneurs across the country. With years of experience in the agricultural machinery sector, we have established ourselves
+                                as a trusted partner for farming communities in Nakuru, Naivasha, and beyond.
+                            </p>
+                        </div>
+
+                        <div class="info-card">
+                            <h3 style="margin-bottom: 12px; color: var(--green);">Our Reliability & Commitment</h3>
+                            <p>
+                                <strong>Reliable Quality:</strong> We source premium agro-machinery that meets industry standards, ensuring durability and long-term performance on your farm or business.
+                            </p>
+                            <p style="margin-top: 10px;">
+                                <strong>Nationwide Availability:</strong> While based in Nakuru and Naivasha, we are committed to reaching customers across the country. We work with reliable logistics partners to ensure timely delivery of equipment to
+                                your location.
+                            </p>
+                            <p style="margin-top: 10px;">
+                                <strong>Better Goods, Better Prices:</strong> We pride ourselves on offering superior quality machinery at competitive prices, making modern agricultural technology accessible to all farming levels.
+                            </p>
+                        </div>
+
+                        <div class="info-card">
+                            <h3 style="margin-bottom: 12px; color: var(--green);">Flexible Payment Options</h3>
+                            <p>
+                                Understanding the financial challenges of farming, we offer both cash and flexible loan plans to make quality equipment affordable. Whether you prefer immediate payment or convenient monthly installments, we have a plan that works for your business.
+                            </p>
+                        </div>
+
+                        <div class="info-card">
+                            <h3 style="margin-bottom: 12px; color: var(--green);">Customer-Centric Service</h3>
+                            <p>
+                                Our team is available via WhatsApp for quick inquiries, product orders, and customer support. We believe in building lasting relationships with our customers by providing responsive and dependable service.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="certificate-section">
+                        <div>
+                            <h3 style="color: var(--green); margin-bottom: 16px; font-size: 1.2rem;">Our Credentials</h3>
+                            <p>
+                                Timiza Agro Machinery is a trusted and certified provider of agricultural machinery. Our commitment to quality and excellence is reflected in our industry certifications and recognitions. We meet and exceed industry standards to ensure that every piece of equipment we provide is reliable, durable, and built to last.
+                            </p>
+                            <p style="margin-top: 12px;">
+                                Our certified status demonstrates our dedication to maintaining the highest standards of quality, safety, and customer satisfaction in the agro-machinery industry.
+                            </p>
+                        </div>
+                        <div>
+                            <img src="certificate.jpeg" alt="Timiza Agro Machinery Certificate" class="certificate-image">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section id="products" class="page">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Our Products</h2>
+                    <p class="section-subtitle">
+                        OUR PRODUCTS
+                    </p>
+
+                    <div class="products-grid">
+                        <article class="product-card">
+                            <div class="product-image"><img src="high speed chaff cutter.jpeg" alt="High Speed Chaff Cutter" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                            <div class="product-content">
+                                <h3>High Speed Chaff Cutter</h3>
+                                <div class="price">Cash: KSh 50,000</div>
+                                <div class="plan">Loan: Deposit KSh 4,500 for 22 months</div>
+                                <div class="card-actions">
+                                    <a class="btn whatsapp" href="https://wa.me/254762694293?text=Hello%20I%20want%20the%20High%20Speed%20Chaff%20Cutter%20cash%20KSh%2050,000%20loan%20deposit%20KSh%204,500%20for%2022%20months" target="_blank" rel="noopener">Order on WhatsApp</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="product-image"><img src="high speed chaff cutter.jpeg" alt="High Speed Chaff Cutter" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                            <div class="product-content">
+                                <h3>High Speed Chaff Cutter</h3>
+                                <div class="price">Cash: KSh 120,000</div>
+                                <div class="plan">Loan: Deposit KSh 12,000, then KSh 3,500 monthly for 14 months</div>
+                                <div class="card-actions">
+                                    <a class="btn whatsapp" href="https://wa.me/254762694293?text=Hello%20I%20want%20the%20High%20Speed%20Chaff%20Cutter%20cash%20KSh%20120,000%20loan%20deposit%20KSh%2012,000%20monthly%20KSh%203,500%20for%2014%20months" target="_blank" rel="noopener">Order on WhatsApp</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="product-image"><img src="sugarcane juice machine.jpeg" alt="Sugarcane Juice Machine" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                            <div class="product-content">
+                                <h3>Sugarcane Juice Machine</h3>
+                                <div class="price">Cash: KSh 40,000</div>
+                                <div class="plan">Loan: Deposit KSh 7,500, then KSh 2,940 monthly for 14 months</div>
+                                <div class="card-actions">
+                                    <a class="btn whatsapp" href="https://wa.me/254762694293?text=Hello%20I%20want%20the%20Sugarcane%20Juice%20Machine%20cash%20KSh%2040,000%20loan%20deposit%20KSh%207,500%20monthly%20KSh%202,940%20for%2014%20months" target="_blank" rel="noopener">Order on WhatsApp</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="product-image"><img src="feed pellet machine.jpeg" alt="Feed Pellet Machine" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                            <div class="product-content">
+                                <h3>Feed Pellet Machine</h3>
+                                <div class="price">Cash: KSh 40,000</div>
+                                <div class="plan">Loan: Deposit KSh 7,500, then KSh 3,500 monthly for 14 months</div>
+                                <div class="card-actions">
+                                    <a class="btn whatsapp" href="https://wa.me/254762694293?text=Hello%20I%20want%20the%20Feed%20Pellet%20Machine%20cash%20KSh%2040,000%20loan%20deposit%20KSh%207,500%20monthly%20KSh%203,500%20for%2014%20months" target="_blank" rel="noopener">Order on WhatsApp</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="product-image"><img src="walking tractor.jpeg" alt="Walking Tractor" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                            <div class="product-content">
+                                <h3>Walking Tractor</h3>
+                                <div class="price">Cash: KSh 120,000</div>
+                                <div class="plan">Loan: Deposit KSh 40,000, then KSh 4,500 for 22 months</div>
+                                <div class="card-actions">
+                                    <a class="btn whatsapp" href="https://wa.me/254762694293?text=Hello%20I%20want%20the%20Walking%20Tractor%20cash%20KSh%20120,000%20loan%20deposit%20KSh%2040,000%20monthly%20KSh%204,500%20for%2022%20months" target="_blank" rel="noopener">Order on WhatsApp</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="product-image"><img src="generator.jpeg" alt="Generator" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                            <div class="product-content">
+                                <h3>Generator</h3>
+                                <div class="price">Cash: KSh 40,000</div>
+                                <div class="plan">Loan: Deposit KSh 15,000, then KSh 2,500 monthly for 14 months</div>
+                                <div class="card-actions">
+                                    <a class="btn whatsapp" href="https://wa.me/254762694293?text=Hello%20I%20want%20the%20Generator%20cash%20KSh%2040,000%20loan%20deposit%20KSh%2015,000%20monthly%20KSh%202,500%20for%2014%20months" target="_blank" rel="noopener">Order on WhatsApp</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="product-image"><img src="combine high speed chaff cutter.jpeg" alt="Combine High Speed Chaff Cutter" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                            <div class="product-content">
+                                <h3>Combine High Speed Chaff Cutter</h3>
+                                <div class="price">Cash: KSh 85,000</div>
+                                <div class="plan">Loan: Deposit KSh 15,000, then KSh 3,500 monthly for 20 months</div>
+                                <div class="card-actions">
+                                    <a class="btn whatsapp" href="https://wa.me/254762694293?text=Hello%20I%20want%20the%20Combine%20High%20Speed%20Chaff%20Cutter%20cash%20KSh%2085,000%20loan%20deposit%20KSh%2015,000%20monthly%20KSh%203,500%20for%2020%20months" target="_blank" rel="noopener">Order on WhatsApp</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="product-image"><img src="incubator.jpeg" alt="Incubator" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                            <div class="product-content">
+                                <h3>Incubator</h3>
+                                <div class="price">Cash: KSh 40,000</div>
+                                <div class="plan">Loan: Deposit KSh 12,000, then KSh 3,500 monthly for 14 months</div>
+                                <div class="card-actions">
+                                    <a class="btn whatsapp" href="https://wa.me/254762694293?text=Hello%20I%20want%20the%20Incubator%20cash%20KSh%2040,000%20loan%20deposit%20KSh%2012,000%20monthly%20KSh%203,500%20for%2014%20months" target="_blank" rel="noopener">Order on WhatsApp</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="product-image"><img src="grass cutter machine.jpeg" alt="Grass Cutter Machine" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                            <div class="product-content">
+                                <h3>Grass Cutter Machine</h3>
+                                <div class="price">Cash: KSh 35,000</div>
+                                <div class="plan">Loan: Deposit KSh 8,500, then KSh 3,500 monthly for 14 months</div>
+                                <div class="card-actions">
+                                    <a class="btn whatsapp" href="https://wa.me/254762694293?text=Hello%20I%20want%20the%20Grass%20Cutter%20Machine%20cash%20KSh%2035,000%20loan%20deposit%20KSh%208,500%20monthly%20KSh%203,500%20for%2014%20months" target="_blank" rel="noopener">Order on WhatsApp</a>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="product-image"><img src="shelder machine.jpeg" alt="Shelder Machine" style="width: 100%; height: 100%; object-fit: cover;"></div>
+                            <div class="product-content">
+                                <h3>Shelder Machine</h3>
+                                <div class="price">Cash: KSh 40,000</div>
+                                <div class="plan">Loan: Deposit KSh 12,000, then KSh 3,500 monthly for 14 months</div>
+                                <div class="card-actions">
+                                    <a class="btn whatsapp" href="https://wa.me/254762694293?text=Hello%20I%20want%20the%20Shelder%20Machine%20cash%20KSh%2040,000%20loan%20deposit%20KSh%2012,000%20monthly%20KSh%203,500%20for%2014%20months" target="_blank" rel="noopener">Order on WhatsApp</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <section id="contact" class="page">
+            <section class="section">
+                <div class="container">
+                    <h2 class="section-title">Contact Us</h2>
+                    <p class="section-subtitle">
+                        Send an inquiry through the form below or reach us directly on WhatsApp.
+                    </p>
+
+                    <div class="contact-wrap">
+                        <div class="contact-card">
+                            <h3>Business Contacts</h3>
+                            <div class="contact-list">
+                                <div class="contact-item">
+                                    <strong>Location</strong>
+                                    <span>Nakuru, Naivasha</span>
+                                </div>
+                                <div class="contact-item">
+                                    <strong>General Manager</strong>
+                                    <span>0782424842</span>
+                                </div>
+                                <div class="contact-item">
+                                    <strong>Assistant Manager</strong>
+                                    <span>0762694293</span>
+                                </div>
+                                <div class="contact-item">
+                                    <strong>Email</strong>
+                                    <span><a href="mailto:thiongojosphat21@gmail.com">thiongojosphat21@gmail.com</a></span>
+                                </div>
+                            </div>
+                            <div style="margin-top:16px">
+                                <a class="btn whatsapp" href="https://wa.me/254762694293?text=Hello%20TIMIZA%20AGRO%20MACHINERY%2C%20I%20have%20an%20inquiry" target="_blank" rel="noopener">Chat on WhatsApp</a>
+                            </div>
+                        </div>
+
+                        <div class="form-card">
+                            <h3>Send Inquiry Form</h3>
+                            <form action="mailto:thiongojosphat21@gmail.com" method="post" enctype="text/plain">
+                                <input type="text" name="name" placeholder="Your Name" required />
+                                <input type="email" name="email" placeholder="Your Email" required />
+                                <input type="tel" name="phone" placeholder="Your Phone Number" required />
+                                <select name="product">
+                  <option value="">Select Product</option>
+                  <option>High Speed Chaff Cutter</option>
+                  <option>Sugarcane Juice Machine</option>
+                  <option>Feed Pellet Machine</option>
+                  <option>Walking Tractor</option>
+                  <option>Generator</option>
+                  <option>Combine High Speed Chaff Cutter</option>
+                  <option>Incubator</option>
+                  <option>Grass Cutter Machine</option>
+                  <option>Shelder Machine</option>
+                </select>
+                                <textarea name="message" placeholder="Write your inquiry here..." required></textarea>
+                                <button type="submit" class="btn">Send Inquiry</button>
+                            </form>
+                            <p class="muted" style="margin-top:10px">
+                                instant replay
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p><strong>Location:</strong></p>
+                    <p>Nakuru, Naivasha</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Phone</h4>
+                    <p><strong>General Manager:</strong></p>
+                    <p><a href="tel:+254782424842">0782424842</a></p>
+                    <p><strong>Assistant Manager:</strong></p>
+                    <p><a href="tel:+254762694293">0762694293</a></p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Email</h4>
+                    <p><a href="mailto:thiongojosphat21@gmail.com">thiongojosphat21@gmail.com</a></p>
+                    <p style="margin-top: 16px;"><a class="btn whatsapp" href="https://wa.me/254762694293?text=Hello%20TIMIZA%20AGRO%20MACHINERY%2C%20I%20have%20an%20inquiry" target="_blank" rel="noopener" style="display: inline-block; padding: 8px 16px; background: #25d366; border-radius: 8px; font-size: 0.85rem;">Chat on WhatsApp</a></p>
+                </div>
+            </div>
+
+            <div class="footer-divider">
+                <p>&copy; 2026 TIMIZA AGRO MACHINERY. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const links = document.querySelectorAll('.nav-links a');
+        const pages = document.querySelectorAll('.page');
+
+        function showPage(id) {
+            pages.forEach(p => p.classList.toggle('active', p.id === id));
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        links.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                showPage(link.getAttribute('href').substring(1));
+            });
+        });
+
+        // Handle all View Products buttons and any link to #products
+        const viewProductsBtns = document.querySelectorAll('a[href="#products"]');
+        viewProductsBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                showPage('products');
+            });
+        });
+    </script>
+</body>
+
+</html>
